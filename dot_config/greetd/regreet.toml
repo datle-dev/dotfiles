@@ -1,0 +1,18 @@
+[background]
+path = "/etc/greetd/klukai.jpg"
+fit = "Cover"
+
+[GTK]
+application_prefer_dark_theme = true
+font_name = "JetBrainsMono NFM 11"
+
+[commands]
+reboot = [ "systemctl", "reboot" ]
+poweroff = [ "systemctl", "poweroff" ]
+
+[widget.clock]
+format = "%H:%M"
+resolution = "1m"
+timezone = "America/New_York"
+label_width = 150
+
