@@ -1,21 +1,34 @@
 return {
   {
-    "neovim/nvim-lspconfig",
-    dependencies = {
-      "saghen/blink.cmp",
-      {
-        "folke/lazydev.nvim",
-        ft = "lua",
-        opts = {
-          library = {
-            { path = "${3rd}/luv/library", words = { "vim%.uv" } },
+    "folke/lazydev.nvim",
+    ft = "lua",
+    opts = {
+      library = {
+        { path = "${3rd}/luv/library", words = { "vim%.uv" } },
+      },
+    },
+  },
+  {
+    "saghen/blink.cmp",
+    version = "1.*",
+    opts = {
+      keymap = { preset = "default" },
+      appearance = {
+        use_nvim_cmp_as_default = true,
+        nerd_font_variant = "mono",
+      },
+      signature = { enabled = true },
+      sources = {
+        default = { "lazydev", "lsp", "path", "snippets", "buffer" },
+        providers = {
+          lazydev = {
+            name = "LazyDev",
+            module = "lazydev.integrations.blink",
+            score_offset = 100,
           },
         },
       },
     },
-    config = function()
-      local capabilities = require("blink.cmp").get_lsp_capabilities()
-      require("lspconfig").lua_ls.setup({ capabilities = capabilities })
-    end,
-  },
+  }
 }
+
