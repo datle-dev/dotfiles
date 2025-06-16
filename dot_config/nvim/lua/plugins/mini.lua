@@ -14,6 +14,7 @@ return {
       miniclue.setup({
         clues = {
           { mode = "n", keys = "<leader>f", desc = "+files" },
+          { mode = "n", keys = "<leader>g", desc = "+grapple" },
           miniclue.gen_clues.g(),
           miniclue.gen_clues.marks(),
           miniclue.gen_clues.windows(),
