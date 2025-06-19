@@ -15,6 +15,7 @@ return {
         clues = {
           { mode = "n", keys = "<leader>f", desc = "+files" },
           { mode = "n", keys = "<leader>g", desc = "+grapple" },
+          { mode = "n", keys = "<leader>s", desc = "+search" },
           miniclue.gen_clues.g(),
           miniclue.gen_clues.marks(),
           miniclue.gen_clues.windows(),
@@ -69,6 +70,11 @@ return {
     "echasnovski/mini.pick",
     version = false,
     opts = {},
+    keys = {
+      {"<leader>sf", "<cmd>Pick files<CR>", desc = "search files"},
+      {"<leader>sg", "<cmd>Pick grep<CR>", desc = "search grep"},
+      {"<leader>sb", "<cmd>Pick buffers<CR>", desc = "search buffers"},
+    },
   },
   {
     "echasnovski/mini.snippets",
