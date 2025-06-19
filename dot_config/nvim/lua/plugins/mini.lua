@@ -74,6 +74,7 @@ return {
       {"<leader>sf", "<cmd>Pick files<CR>", desc = "search files"},
       {"<leader>sg", "<cmd>Pick grep<CR>", desc = "search grep"},
       {"<leader>sb", "<cmd>Pick buffers<CR>", desc = "search buffers"},
+      {"<leader>sh", "<cmd>Pick help<CR>", desc = "search help"},
     },
   },
   {
