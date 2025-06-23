@@ -13,7 +13,7 @@ return {
       local miniclue = require('mini.clue')
       miniclue.setup({
         clues = {
-          { mode = "n", keys = "<leader>f", desc = "+files" },
+          { mode = "n", keys = "<leader>f", desc = "+fuzzy" },
           { mode = "n", keys = "<leader>g", desc = "+grapple" },
           { mode = "n", keys = "<leader>s", desc = "+search" },
           miniclue.gen_clues.g(),
@@ -43,11 +43,11 @@ return {
     },
     keys = {
       {
-        "<leader>fm",
+        "<leader>e",
         function()
           require("mini.files").open(vim.api.nvim_buf_get_name(0), true)
         end,
-        desc = "mini files",
+        desc = "explorer",
       },
     },
     config = function(_, opts)
