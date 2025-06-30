@@ -4,6 +4,7 @@ require("config.options")
 require("config.autocmd")
 
 vim.lsp.enable({
+  "gopls",
   "lua_ls",
   "marksman",
   "pyright",
