@@ -61,10 +61,30 @@ return {
     opts = {},
   },
   {
+    "echasnovski/mini.indentscope",
+    version = false,
+    opts = {
+      draw = {
+        animation = function() return 0 end,
+      },
+      symbol = '│|',
+    },
+    config = function(_, opts)
+      require("mini.indentscope").setup(opts)
+    end
+  },
+  {
     "echasnovski/mini.pairs",
     version = false,
     lazy = false,
-    opts = {},
+    opts = {
+      skip_ts = { "string" },
+      skip_unbalanced = true,
+      markdown = true,
+    },
+    config = function(_, opts)
+      require("mini.pairs").setup(opts)
+    end
   },
   {
     "echasnovski/mini.pick",
