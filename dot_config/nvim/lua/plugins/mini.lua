@@ -67,7 +67,7 @@ return {
       draw = {
         animation = function() return 0 end,
       },
-      symbol = '│|',
+      symbol = '│',
     },
     config = function(_, opts)
       require("mini.indentscope").setup(opts)
